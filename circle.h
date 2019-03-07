@@ -1,11 +1,20 @@
 #ifndef CIRCLE_H
 #define CIRCLE_H
-#include"mader_shape.h"
 
-class Circle : public Mader_Shape
+#include "shape.h"
+#include<QPainter>
+#include <QWidget>
+
+class Circle : public Shape, QWidget
 {
 public:
     Circle();
+    void create();
+
+private:
+    QPainter *__Painter;
+protected:
+    void paintEvent(QPaintEvent *event);
 };
 
 #endif // CIRCLE_H
