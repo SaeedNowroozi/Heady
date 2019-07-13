@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION "3.9.6")
 
-project("HelloWorld")
+project("OpenDot")
 
 add_executable("${PROJECT_NAME}" "Main.cpp")
 
