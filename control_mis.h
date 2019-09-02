@@ -1,5 +1,19 @@
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 #ifndef CONTROL_MIS_H
 #define CONTROL_MIS_H
+
+/////////////////        MICROCONTROLLER physare
+#define _standar    0x01
+#define P_start     0x03
+#define P_low       0x02
+#define P_high      0x05
+#define P_inc       0x09
+#define P_dic       0x08
+#define P_stop      0x07
 
 #include "Interface/interface_fpga.h"
 #include "Interface/interface_usb.h"

@@ -1,3 +1,8 @@
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 #ifndef CONTROL_HEAD_H
 #define CONTROL_HEAD_H
 
@@ -5,7 +10,14 @@
 #include <set>
 #include <tuple>
 #include <cassert>
-
+#include <vector>
+#include <list>
+using namespace std;
+#define Max_Speed_Head 200
+typedef bool Black[127];
+typedef int Nazzel[127];
+//typedef std::list<Black> Horizental;
+//typedef std::list<Horizental> Data_set_bit;
 //#include <QTime>
 class QTime;
 #include "Interface/interface_fpga.h"
@@ -43,6 +55,9 @@ private:
     Interface_USB  *__Interface_USB;
     Smart_Algorithm *__smart_algorthm;
     int enable;//enable head
+    Black heead;
+    Nazzel __naz;
+   // Data_set_bit __data_set_bit;
 };
 
 #endif // CONTROL_HEAD_H4

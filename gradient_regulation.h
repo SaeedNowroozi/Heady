@@ -1,3 +1,8 @@
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 #ifndef GRADIENT_REGULATION_H
 #define GRADIENT_REGULATION_H
 
@@ -20,8 +25,8 @@ public:
     };
     Gradient_Regulation();
     //Ground is 9 * 9 cm2
-    void Sizing( Shape _shape, int heigh, int wight )const;
-    void Resolution( Shape _Shape )const;
+    //void Sizing( Shape _shape, int heigh, int wight )const;
+    //void Resolution( Shape _Shape )const;
     void Definition( std::pair<Shape, Shape>Image, int Horizontal, int Vertical, int _Horizontal_Resolation,
                      int _Vertical_Resolation );
     void BinaryPatternMethod(BinaryPattern, int Horizontal, int Vertical, int _Horizontal_Resolation,

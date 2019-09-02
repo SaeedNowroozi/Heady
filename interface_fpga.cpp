@@ -1,6 +1,8 @@
-//Writen by Saeed Nowroozi
-//saeednowroozi69@gmail.com
-
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 #include "interface_fpga.h"
 #include "Control/control_head.h"
 
@@ -26,12 +28,12 @@ Interface_FPGA::Interface_FPGA()
     __control_head = new Control_Head();
 }
 
-bool Interface_FPGA::check(Interface_FPGA::SPI)
+bool Interface_FPGA::__check(Interface_FPGA::SPI)
 {
 
 }
 
-bool Interface_FPGA::Send(BYTE)
+bool Interface_FPGA::__Send(BYTE)
 {
 
 }
@@ -41,7 +43,7 @@ BYTE Interface_FPGA::_Get(const BYTE &)
 
 }
 
-bool Interface_FPGA::Get(BYTE)
+bool Interface_FPGA::__Get(BYTE)
 {
 
 }

@@ -1,6 +1,8 @@
-//Writen by Saeed Nowroozi
-//saeednowroozi69@gmail.com
-
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 #include "timer.h"
 #include <iostream>
 
@@ -11,7 +13,7 @@ Timer::Timer()
 
 Timer::~Timer()
 {
- delete _timer;
+    delete _timer;
 }
 
 //void Timer::_time_Algouritm(QTimer t, int _start, int _finish, Chart _rectangle)
@@ -40,15 +42,15 @@ int Timer::_interval() const
 
 bool Timer::_isActive() const
 {
-   auto active = _timer->isActive();
-   if(active == true)
-       std::cout <<"timer is runnig";
-   else
-       std::cout<< "timer is stop";
-   return active;
+    auto active = _timer->isActive();
+    if(active == true)
+        std::cout <<"timer is runnig";
+    else
+        std::cout<< "timer is stop";
+    return active;
 }
 
 void Timer::_start(std::chrono::milliseconds msec)
 {
-   _timer->start(msec);
+    _timer->start(msec);
 }

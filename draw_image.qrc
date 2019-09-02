@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/root/Image">
+        <file>Image/BlueBullet.png</file>
+    </qresource>
+</RCC>

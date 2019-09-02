@@ -1,7 +1,8 @@
-//Writen by Saeed Nowroozi
-//saeednowroozi69@gmail.com
-
-
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 #include "convert_to_pixel.h"
 
 Convert_to_Pixel::Convert_to_Pixel()
@@ -24,6 +25,7 @@ void Convert_to_Pixel::convX(std::pair<std::vector<int>, std::vector<int> > pixe
 void Convert_to_Pixel::convY(std::pair<std::vector<int>, std::vector<int> > pixel)
 {
     int postion;
+    Q_UNUSED(postion)
 //   for(auto _search_x = pixel; _search_x <= pixel.first.cend(); ++ _search_x)
 //   {
 //       postion = __shape->postion();
@@ -34,6 +36,7 @@ void Convert_to_Pixel::convY(std::pair<std::vector<int>, std::vector<int> > pixe
 std::vector<BYTE> Convert_to_Pixel::__ConPix() const
 {
     std::vector<BYTE>::iterator __iteCon;
+    Q_UNUSED(__iteCon)
     std::vector<BYTE> a;
     return a;
 }

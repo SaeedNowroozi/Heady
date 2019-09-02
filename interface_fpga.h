@@ -1,8 +1,24 @@
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 #ifndef INTERFACE_FPGA_H
 #define INTERFACE_FPGA_H
+
+//Select module's and motors
+#define motor1 0x00000100
+#define motor2 0x00001000
+#define motor3 0x00001100
+#define microcontrolle 0x00000010
+#define _head 0x00000011
+#define seqn5 0x10000000//5volt
+#define seqnl35 0x11000000//35 volt_low
+#define seqnh35 0x01000000//35 volt_high
+
 #include "Control/control_motor.h"
 
-//#include"Control/control_head.h"
+
 
 #include <assert.h>
 
@@ -22,11 +38,11 @@ public:
     };
     Interface_FPGA();
     /* Check SPI Protecol*/
-    bool check(SPI);
+    bool __check(SPI);
     // Transmation
-    bool Send(BYTE);
+    bool __Send(BYTE);
     // Resive
-    bool Get(BYTE);
+    bool __Get(BYTE);
     //Config Motors
     bool Config_motor();
     //config head

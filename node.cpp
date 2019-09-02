@@ -1,3 +1,8 @@
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 #include "node.h"
 #include "edge.h"
 
@@ -73,7 +78,7 @@ void Node::paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWid
 //! [11]
 QVariant Node::itemChange(GraphicsItemChange change, const QVariant &value)
 {
-    switch (change) {
+    /*  switch (change) {
     case ItemPositionHasChanged:
         foreach (Edge *edge, edgeList)
             edge->adjust();
@@ -81,7 +86,7 @@ QVariant Node::itemChange(GraphicsItemChange change, const QVariant &value)
         break;
     default:
         break;
-    };
+    }*/;
 
     return QGraphicsItem::itemChange(change, value);
 }

@@ -1,12 +1,15 @@
-//Writen by Saeed Nowroozi
-//saeednowroozi69@gmail.com
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 
 #include "thread_motors.h"
 
 Thread_Motors::Thread_Motors()
 {
-   __Control_Mis = new Control_Mis();
-   __Control_Motor = new Control_Motor( __Motor_Init );
+    __Control_Mis = new Control_Mis();
+    __Control_Motor = new Control_Motor( __Motor_Init );
 }
 
 void Thread_Motors::exit(int)

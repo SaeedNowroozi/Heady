@@ -1,21 +1,32 @@
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
+#include "node.h"
 #include "edge.h"
+
+#include <QGraphicsScene>
+#include <QGraphicsSceneMouseEvent>
+#include <QPainter>
+#include <QStyleOption>
 
 Edge::Edge(Node *sourcenode, Node *destnode):
     arrowsize(1)
 {
-    sourcePoint = sourcenode;
-    destPoint = destnode;
+    _NodeSource = sourcenode;
+    _NodeDistance = destnode;
 
 }
 
 Node *Edge::sourcenode() const
 {
-    return sourcePoint;
+    return _NodeSource;
 }
 
 Node *Edge::destnode() const
 {
-    return destPoint;
+    return _NodeDistance;
 }
 
 Edge::Edge(QList<Node *> _List_of_Node)
@@ -34,11 +45,11 @@ void Edge::PointCount() const
 }
 QRectF Edge::boundingRect()const
 {
-    if (!source || !dest)
-        return QRectF();
+    //    if (!source || !dest)
+    //        return QRectF();
 
     qreal penWidth = 1;
-    qreal extra = (penWidth + arrowSize) / 2.0;
+    qreal extra = (penWidth + 10) / 2.0;
 
     return QRectF(sourcePoint, QSizeF(destPoint.x() - sourcePoint.x(),
                                       destPoint.y() - sourcePoint.y()))
@@ -47,19 +58,19 @@ QRectF Edge::boundingRect()const
 }
 void Edge::paint(QPainter *painter, const QStyleOptionGraphicsItem *, QWidget *)
 {
-    if (!sourcePoint || !destPoint)
-        return;
+    //    if (!sourcePoint || !destPoint)
+    //        return;
 
-    QLineF line(sourcePoint, destPoint);
-    if (qFuzzyCompare(line.length(), qreal(0.)))
-        return;
-    //! [4]
+    //    QLineF line(sourcePoint, destPoint);
+    //    if (qFuzzyCompare(line.length(), qreal(0.)))
+    //        return;
+    //    //! [4]
 
-    //! [5]
-    // Draw the line itself
-    painter->setPen(QPen(Qt::black, 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
-    painter->drawLine(line);
-    //! [5]
+    //    //! [5]
+    //    // Draw the line itself
+    //    painter->setPen(QPen(Qt::black, 1, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin));
+    //    painter->drawLine(line);
+    //    //! [5]
 
     //! [6]
     // Draw the arrows

@@ -1,5 +1,8 @@
-//Writen by Saeed Nowroozi
-//saeednowroozi69@gmail.com
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 
 #include "smart_algorithm.h"
 #include "Mis/timer.h"
@@ -33,7 +36,7 @@ std::pair<std::vector<int>, std::vector<bool> > *Smart_Algorithm::__counting() c
     //    {
     //        if(i = )
     //    }
-    std::pair<std::vector<int>, std::vector<bool>> *a ;
+    std::pair<std::vector<int>, std::vector<bool>> *a = nullptr ;
     return a;
 }
 
@@ -51,7 +54,7 @@ std::vector<BYTE> *Smart_Algorithm::__smart_alg() const
     //    {
 
     //    }
-    std::vector<BYTE> * a;
+    std::vector<BYTE> * a = nullptr;
     return a;
 }
 

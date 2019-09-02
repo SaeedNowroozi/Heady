@@ -5,12 +5,15 @@
 #-------------------------------------------------
 
 QT       += core gui
-
+QT += charts
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 QT += sql
+QT += testlib
 
 TARGET = Draw_Head
 TEMPLATE = app
+
+
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked as deprecated (the exact warnings
@@ -22,11 +25,19 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # In order to do so, uncomment the following line.
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-
-
+CONFIG += c++11
+QMAKE_CXXFLAGS += -std=c++11
 SOURCES += \
+    Control/form_control.cpp \
+    Interface/form_interface.cpp \
+    Main/form_chart.cpp \
         Main/main.cpp \
         Main/mainwindow.cpp \
+    Main/mydir.cpp \
+    Mis/form_mis.cpp \
+    Shape/form_select_shape.cpp \
+    Shape/mouse_crouser.cpp \
+    Shape/pool_shapes.cpp \
     Shape/shape.cpp \
     Convert/convert_bit.cpp \
     Convert/convert_to_pixel.cpp \
@@ -41,7 +52,6 @@ SOURCES += \
     Convert/convert_pic.cpp \
     Mis/timer.cpp \
     Main/chart.cpp \
-    Main/dir.cpp \
     Mis/camera.cpp \
     Mis/thread_motors.cpp \
     Shape/polygun.cpp \
@@ -55,7 +65,15 @@ SOURCES += \
     Convert/itu_t.cpp
 
 HEADERS += \
+    Control/form_control.h \
+    Interface/form_interface.h \
+    Main/form_chart.h \
         Main/mainwindow.h \
+    Main/mydir.h \
+    Mis/form_mis.h \
+    Shape/form_select_shape.h \
+    Shape/mouse_crouser.h \
+    Shape/pool_shapes.h \
     Shape/shape.h \
     Convert/convert_bit.h \
     Convert/convert_to_pixel.h \
@@ -70,7 +88,6 @@ HEADERS += \
     Convert/convert_pic.h \
     Mis/timer.h \
     Main/chart.h \
-    Main/dir.h \
     Mis/camera.h \
     Mis/thread_motors.h \
     Shape/polygun.h \
@@ -84,4 +101,14 @@ HEADERS += \
     Convert/itu_t.h
 
 FORMS += \
-        Main/mainwindow.ui
+        Control/form_control.ui \
+        Interface/form_interface.ui \
+        Main/form_chart.ui \
+        Main/mainwindow.ui \
+        Mis/form_mis.ui \
+        Shape/form_select_shape.ui
+LIBS += -L"G:\Draw_Head_master\Draw_Head\CyAPI_lib_cpp" -lcyapi
+LIBS += -lsetupapi
+
+RESOURCES += \
+    draw_image.qrc

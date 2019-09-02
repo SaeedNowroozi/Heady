@@ -1,3 +1,8 @@
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 #ifndef CONTROL_MOTOR_H
 #define CONTROL_MOTOR_H
 

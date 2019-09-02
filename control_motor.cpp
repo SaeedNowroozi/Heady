@@ -1,9 +1,14 @@
-//Writen by Saeed Nowroozi
-//saeednowroozi69@gmail.com
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 
 #include "control_motor.h"
 #include "Interface/interface_fpga.h"
 #include "Interface/interface_usb.h"
+
+#include <cmath>
 
 Control_Motor::Control_Motor(int spin)
 {
@@ -650,6 +655,6 @@ unsigned long Control_Motor::Param(unsigned long value, BYTE bit_len)
 BYTE Control_Motor::Xfer(BYTE data)
 {
     BYTE data_out;
-    data_out = FPGA->Send(data);
+    data_out = FPGA->__Send(data);
     return data_out;
 }

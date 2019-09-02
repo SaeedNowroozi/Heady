@@ -1,5 +1,8 @@
-//Writen by Saeed Nowroozi
-//saeednowroozi69@gmail.com
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 
 #include "convert_pic.h"
 #include <iterator>
@@ -7,7 +10,7 @@
 Convert_Pic::Convert_Pic()
 {
    __shape = new Shape();
-   __Dir = new Dir();
+   __Dir = new MyDir();
 }
 
 void Convert_Pic::send_pic()

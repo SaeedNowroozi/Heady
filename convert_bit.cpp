@@ -1,5 +1,8 @@
-//Writen by Saeed Nowroozi
-//saeednowroozi69@gmail.com
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 
 #include "convert_bit.h"
 
@@ -19,6 +22,9 @@ std::vector<BYTE> Convert_Bit::byte(uchar a, std::pair<std::vector<uchar>, std::
     auto x = __Convert_to_Pixel->__Container_Pixel();
     auto y = __Convert_to_Pixel->__Container_Pixel();
     std::vector<BYTE> gathring;
+//    for (auto __con = _Array_Byte_x_y;__con.first.end(), __con.second.end();__con ++) {
+
+//    }
     return  gathring;
 }
 

@@ -1,22 +1,25 @@
-//Writen by Saeed Nowroozi
-//saeednowroozi69@gmail.com
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 
 #include "gradient_regulation.h"
 
 Gradient_Regulation::Gradient_Regulation()
 {
-  __shape = new Shape();
+    __shape = new Shape();
 }
 
-void Gradient_Regulation::Sizing(Shape _shape, int heigh, int wight)const
-{
+//void Gradient_Regulation::Sizing(Shape _shape, int heigh, int wight)const
+//{
 
-}
+//}
 
-void Gradient_Regulation::Resolution(Shape _Shape)const
-{
+//void Gradient_Regulation::Resolution(Shape _Shape)const
+//{
 
-}
+//}
 
 void Gradient_Regulation::Definition(std::pair<Shape, Shape> Image, int Horizontal, int Vertical,
                                      int _Horizontal_Resolation, int _Vertical_Resolation)

@@ -1,8 +1,13 @@
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
 #ifndef CONVERT_PIC_H
 #define CONVERT_PIC_H
 
 #include "Shape/shape.h"
-#include "Main/dir.h"
+#include "Main/mydir.h"
 #include "Shape/pic.h"
 #include "PNG/lodepng.h"
  using lodepng::State;
@@ -22,7 +27,7 @@ public:
 
  private:
     Shape *__shape;
-    Dir *__Dir;
+   MyDir *__Dir;
     Pic *__pic;
  };
 
