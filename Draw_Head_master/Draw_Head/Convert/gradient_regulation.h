@@ -1,0 +1,42 @@
+/*
+Writen by Saeed Nowroozi
+saeednowroozi69@gmail.com
+university of Tabriz, embaded system lab 2017 - 2019
+*/
+#ifndef GRADIENT_REGULATION_H
+#define GRADIENT_REGULATION_H
+
+#include "Shape/pool_shapes.h"
+#include "Convert/convert_to_pixel.h"
+#include <map>
+#include <utility>
+
+#define DPI 300
+#define HRU 1/360
+#define VRU 1/360
+
+class Gradient_Regulation
+{
+public:
+    enum BinaryPattern
+    {
+        Diffusion_dither,
+        Pattern_dither,
+        Halftone_Screen
+    };
+    Gradient_Regulation();
+    //Ground is 9 * 9 cm2
+    //void Sizing( Shape _shape, int heigh, int wight )const;
+    //void Resolution( Shape _Shape )const;
+    void Definition( std::pair<Pool_Shapes, Pool_Shapes>Image, int Horizontal, int Vertical, int _Horizontal_Resolation,
+                     int _Vertical_Resolation );
+    void BinaryPatternMethod(BinaryPattern __bp, int Horizontal, int Vertical, int _Horizontal_Resolation,
+                             int _Vertical_Resolation, int Natural_Print_Direction, int Mounting_Angle,
+                             std::pair<Pool_Shapes, Pool_Shapes>Image);
+    void Convert_to_Send_Algorithm();
+private:
+
+  //  Shape *__shape;
+};
+
+#endif // GRADIENT_REGULATION_H
